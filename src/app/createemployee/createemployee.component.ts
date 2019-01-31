@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormGroup,FormControl} from '@angular/forms'
 
 @Component({
   selector: 'app-createemployee',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateemployeeComponent implements OnInit {
 
+  empfromgroup:FormGroup;
+
   constructor() { }
 
   ngOnInit() {
+    this.empfromgroup=new FormGroup({
+      fullname:new FormControl(),
+      email:new FormControl()
+    });
   }
 
+  onSubmit():void{
+   console.log( this.empfromgroup.value);
+
+  }
 }

@@ -1,3 +1,15 @@
 <p>
   createemployee works!
 </p>
+
+<form [formGroup]="empfromgroup" (ngSubmit)="onSubmit()">
+
+  fullname
+  <input id="fullname" type="text" formControlName="fullname" />
+
+  email
+  <input id="email" type="text" formControlName="email"/>
+
+  <input type="submit"/>
+
+</form>
