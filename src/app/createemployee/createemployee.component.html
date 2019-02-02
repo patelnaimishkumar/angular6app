@@ -3,13 +3,38 @@
 </p>
 
 <form [formGroup]="empfromgroup" (ngSubmit)="onSubmit()">
-
+<div>
   fullname
   <input id="fullname" type="text" formControlName="fullname" />
+</div>
+<div>
+  emails
+  <input id="email" type="text" formControlName="email" />
+</div>
 
-  email
-  <input id="email" type="text" formControlName="email"/>
+<div formGroupName="skills">
+<div>
+    SkillName
+    <input id="skillname" type="text" formControlName="skillname"/>
+  </div>
 
+  <div>
+    Experience
+    <input id="exeperience" type="text" formControlName="exeperience"/>
+  </div>
+
+  <div>
+    Proficiency
+    <input type="radio" id="proficiency" formControlName="proficiency" value="beginner"/>Beginner
+    <input type="radio" id="proficiency" formControlName="proficiency" value="intermediate"/>intermediate
+    <input type="radio" id="proficiency" formControlName="proficiency" value="expert"/>Expert
+  </div>
+</div>
+
+
+<div>
   <input type="submit"/>
+</div>
+
 
 </form>
